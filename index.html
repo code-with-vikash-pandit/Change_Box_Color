@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change_Box_color</title>
+    <style>
+      .btn {
+        padding: 40px 58px;
+        margin: 2px 0px 0px 4px;
+        background: var(--color);
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .btn-1 {
+        --color: red;
+        color: white;
+      }
+      .btn-2 {
+        --color: green;
+        color: white;
+      }
+
+      .btn-3 {
+        --color: Blue;
+        color: white;
+      }
+
+      .btn-4 {
+        --color: yellow;
+        color: white;
+      }
+
+      .btn-5 {
+        --color: pink;
+        color: white;
+      }
+
+      .btn-6 {
+        --color: Orange;
+        color: white;
+      }
+
+      .btn-7 {
+        --color: Purple;
+        color: white;
+      }
+
+      .btn-8 {
+        --color: Black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+      <button class="btn btn-1">Red</button>
+      <button class="btn btn-2">Green</button>
+      <button class="btn btn-3">Blue</button>
+      <button class="btn btn-4">Yellow</button>
+      <button class="btn btn-5">Pink</button>
+      <button class="btn btn-6">Orange</button>
+      <button class="btn btn-7">Purple</button>
+      <button class="btn btn-8">Black</button>
+  </body>
+
+  <script>
+    const btns = document.getElementsByClassName("btn");
+    for (const btn of btns) {
+        btn.addEventListener("click", function() {
+            const buttonStyle = getComputedStyle(this);
+            const buttonBackgroundColor = buttonStyle ["backgroundColor"];
+            document.body.style .backgroundColor = buttonBackgroundColor;
+        });
+    }
+  </script>
+
+</html>
